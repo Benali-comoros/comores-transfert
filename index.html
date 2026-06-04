@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ======================================================================
+       SEO - TODO : Personnaliser titre, description, image og
+       ====================================================================== -->
+  <title>KomoreTransfert – Comparez le vrai coût de votre transfert France → Comores</title>
+  <meta name="description" content="Comparez Wise, Remitly, WorldRemit, Sendwave pour envoyer de l'argent aux Comores. Découvrez le vrai coût total : frais + marge sur taux de change. Mise à jour hebdomadaire." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://[VOTRE_USERNAME].github.io/comores-transfert/" />
+  <!-- TODO : remplacer [VOTRE_USERNAME] par votre identifiant GitHub -->
+
+  <!-- Open Graph (réseaux sociaux) -->
+  <meta property="og:title" content="KomoreTransfert – Le vrai coût de votre transfert vers les Comores" />
+  <meta property="og:description" content="Comparez Wise, Remitly, WorldRemit et Sendwave. Taux de change + frais en transparence totale." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://[VOTRE_USERNAME].github.io/comores-transfert/" />
+  <!-- TODO : Ajouter une image og:image de 1200x630px -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KomoreTransfert – Comparez vos transferts France → Comores" />
+
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KomoreTransfert",
+    "url": "https://[VOTRE_USERNAME].github.io/comores-transfert/",
+    "description": "Comparateur de transfert d'argent France vers Comores",
+    "inLanguage": "fr-FR"
+  }
+  </script>
+
+  <!-- TODO : Ajouter Google Analytics 4 ou Plausible ici -->
+  <!-- Exemple GA4 :
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>" />
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       BANDEAU COOKIES RGPD
+       ====================================================================== -->
+  <div id="cookie-banner" role="dialog" aria-label="Consentement cookies" style="display:none">
+    <div class="cookie-inner">
+      <p>
+        Nous utilisons des cookies pour mesurer l'audience et améliorer votre expérience.
+        Les liens vers nos partenaires contiennent des liens affiliés.
+        <a href="#footer-legal">En savoir plus</a>
+      </p>
+      <button class="btn-accept">Accepter</button>
+      <button class="btn-decline">Refuser</button>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       HEADER
+       ====================================================================== -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="KomoreTransfert - Accueil">
+        <span class="logo-name">Komore<span>Transfert</span></span>
+        <span class="logo-tagline">Le vrai coût de votre transfert</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav aria-label="Navigation principale">
+        <a href="index.html" class="active">Accueil</a>
+        <a href="index.html#comparateur">Comparer</a>
+        <a href="guide.html">Guide</a>
+        <a href="index.html#contact" class="nav-cta">Alertes taux</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       HERO
+       ====================================================================== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <span class="hero-badge">🇫🇷 → 🇰🇲 France · Comores</span>
+
+      <h1 id="hero-title">
+        Arrêtez de payer trop cher<br />
+        pour envoyer de l'argent<br />
+        <em>aux Comores</em>
+      </h1>
+
+      <p class="hero-subtitle">
+        Les frais affichés ne racontent qu'une partie de la vérité.
+        Nous calculons le <strong>coût total réel</strong> : frais + marge
+        cachée sur le taux de change. Comparez en 10 secondes.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#comparateur" class="btn btn-primary">
+          Comparer maintenant
+        </a>
+        <a href="guide.html" class="btn btn-outline">
+          Lire le guide
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">6</span>
+          <span class="stat-label">Opérateurs comparés</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Transparent</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">0 €</span>
+          <span class="stat-label">Frais de comparaison</span>
+        </div>
+        <!-- TODO : Mettre à jour la date de mise à jour chaque semaine -->
+        <div class="stat-item">
+          <span class="stat-number" id="update-date">05/06</span>
+          <span class="stat-label">Dernière mise à jour</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       COMPARATEUR
+       ====================================================================== -->
+  <section class="comparateur" id="comparateur" aria-labelledby="comparateur-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Comparateur en temps réel</p>
+        <h2 id="comparateur-title">Quel opérateur vous donne le plus ?</h2>
+        <p>Entrez votre montant — le tableau se recalcule automatiquement.</p>
+      </div>
+
+      <!-- Calculateur -->
+      <div class="calculator-bar" role="form" aria-label="Calculateur de montant">
+        <label for="montant-input">J'envoie :</label>
+        <div class="input-group">
+          <span class="input-prefix">€</span>
+          <input
+            type="number"
+            id="montant-input"
+            value="200"
+            min="10"
+            max="50000"
+            step="10"
+            aria-label="Montant à envoyer en euros"
+            inputmode="numeric"
+          />
+          <span class="input-suffix">EUR → KMF</span>
+        </div>
+        <p class="calc-note" id="calc-note">
+          <!-- Rempli par JavaScript -->
+        </p>
+      </div>
+
+      <!-- Tableau comparatif -->
+      <div class="table-wrapper" role="region" aria-label="Tableau comparatif des opérateurs">
+        <table class="comparison-table" id="comparison-table">
+          <thead>
+            <tr>
+              <th>Opérateur</th>
+              <th data-sort="frais">
+                Frais fixes <span class="sort-icon">↕</span>
+              </th>
+              <th data-sort="taux">
+                Taux EUR/KMF <span class="sort-icon">↕</span>
+              </th>
+              <th data-sort="received">
+                Montant reçu <span class="sort-icon">↕</span>
+              </th>
+              <th data-sort="cout">
+                Coût réel <span class="sort-icon">↕</span>
+              </th>
+              <th data-sort="delai">
+                Délai <span class="sort-icon">↕</span>
+              </th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="comparison-tbody">
+            <!-- Rempli par JavaScript -->
+            <tr>
+              <td colspan="7" style="text-align:center;padding:24px;color:#6C757D">
+                Chargement du comparateur…
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-scroll-hint">← Faites défiler pour voir tout le tableau →</p>
+
+      <div class="disclaimer" role="note">
+        <strong>Note :</strong> Les taux affichés sont indicatifs et mis à jour chaque semaine.
+        Le taux de marché de référence utilisé est <strong id="taux-marche-display">493,00 KMF/€</strong>
+        (source : taux mid-market Wise).
+        <!-- TODO : Mettre à jour le taux de marché dans script.js (variable TAUX_MARCHE) -->
+        Les taux réels peuvent varier selon l'heure et le montant. Vérifiez toujours sur le site de l'opérateur avant d'envoyer.
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       POURQUOI NOUS FAIRE CONFIANCE
+       ====================================================================== -->
+  <section class="trust" id="confiance" aria-labelledby="trust-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Nos engagements</p>
+        <h2 id="trust-title">Pourquoi nous faire confiance ?</h2>
+        <p>
+          Nous sommes de la diaspora comorienne. Nous savons ce que ça coûte
+          d'envoyer de l'argent à la famille.
+        </p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-icon" aria-hidden="true">🔍</div>
+          <h3>Transparence totale sur les coûts</h3>
+          <p>
+            Les frais affichés par les opérateurs cachent souvent une marge
+            de 1 à 3 % sur le taux de change. Nous calculons et affichons
+            le <strong>coût total réel</strong> pour que vous sachiez
+            exactement ce que vous payez.
+          </p>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon" aria-hidden="true">📅</div>
+          <h3>Données mises à jour chaque semaine</h3>
+          <p>
+            Les taux de change varient quotidiennement. Notre équipe vérifie
+            et met à jour le tableau chaque semaine. La date de dernière
+            mise à jour est toujours affichée en haut de page.
+          </p>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-icon" aria-hidden="true">🤝</div>
+          <h3>Indépendant et sans conflit d'intérêt</h3>
+          <p>
+            Nous gagnons une commission si vous utilisez nos liens affiliés,
+            mais cela <strong>ne change pas le classement</strong>.
+            Western Union et Orange Money sont listés même sans accord commercial,
+            parce que vous méritez une image complète du marché.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       COMMENT ÇA MARCHE
+       ====================================================================== -->
+  <section class="how-it-works" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Simple et rapide</p>
+        <h2 id="how-title">Comment comparer en 3 étapes</h2>
+        <p>Pas d'inscription, pas de données personnelles demandées.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-number" aria-hidden="true">1</div>
+          <h3>Entrez votre montant</h3>
+          <p>
+            Tapez le montant que vous souhaitez envoyer en euros.
+            Le tableau se met à jour instantanément.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number" aria-hidden="true">2</div>
+          <h3>Comparez le vrai coût</h3>
+          <p>
+            Regardez la colonne "Coût réel" — c'est ce que vous perdez
+            réellement par rapport au taux de marché.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number" aria-hidden="true">3</div>
+          <h3>Choisissez le meilleur</h3>
+          <p>
+            Cliquez sur "Envoyer" pour aller directement sur le site
+            de l'opérateur et finaliser votre transfert.
+          </p>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number" aria-hidden="true">4</div>
+          <h3>Revenez la semaine suivante</h3>
+          <p>
+            Les taux changent. Abonnez-vous à nos alertes pour être
+            prévenu quand le meilleur tarif change.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       NEWSLETTER / ALERTES TAUX
+       ====================================================================== -->
+  <section class="newsletter" id="contact" aria-labelledby="newsletter-title">
+    <div class="newsletter-inner">
+      <div class="section-header" style="margin-bottom:0">
+        <p class="section-label">Alertes gratuites</p>
+        <h2 id="newsletter-title">Soyez alerté quand le meilleur taux change</h2>
+        <p style="margin-top:10px">
+          Chaque semaine, on compare pour vous et on vous envoie un email si
+          le classement change. Gratuit, sans spam, désabonnement en 1 clic.
+        </p>
+      </div>
+
+      <form id="newsletter-form" class="newsletter-form" novalidate style="margin-top:24px">
+        <input
+          type="email"
+          placeholder="votre@email.com"
+          required
+          aria-label="Votre adresse email"
+          autocomplete="email"
+        />
+        <!-- TODO : Connecter ce formulaire à Brevo (ex-SendinBlue), Mailchimp,
+             ou ConvertKit. Tous proposent un plan gratuit. -->
+        <button type="submit">Je m'abonne</button>
+      </form>
+
+      <p class="newsletter-legal">
+        Vos données ne sont pas partagées. Conformément au RGPD, vous pouvez
+        demander la suppression à tout moment.
+      </p>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer id="footer-legal">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-name">Komore<span style="color:#D4A017">Transfert</span></span>
+        </div>
+        <p>
+          Comparateur indépendant de transfert d'argent entre la France et les Comores.
+          Nous aidons la diaspora comorienne à envoyer plus d'argent à leur famille
+          en toute transparence.
+        </p>
+        <!-- TODO : Ajouter vos réseaux sociaux -->
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#comparateur">Comparateur</a></li>
+          <li><a href="guide.html">Guide pratique</a></li>
+          <li><a href="index.html#contact">Alertes taux</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="#footer-legal">Mentions légales</a></li>
+          <li><a href="#footer-legal">Politique RGPD</a></li>
+          <li><a href="#footer-legal">Disclaimer affiliation</a></li>
+          <!-- TODO : Créer des pages mentions légales et RGPD dédiées -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; <span id="footer-year">2025</span> KomoreTransfert — Tous droits réservés.
+        <!-- TODO : Mettre à jour l'année ou la générer via JS -->
+      </p>
+      <small>
+        Dernière mise à jour du tableau : <span id="footer-update">05 juin 2026</span>
+        <!-- TODO : Mettre à jour cette date chaque semaine -->
+      </small>
+    </div>
+
+    <div class="footer-affil-disclaimer">
+      <strong>Mention affilié :</strong> KomoreTransfert participe à des programmes d'affiliation.
+      Certains liens sur ce site sont des liens sponsorisés (Wise, Remitly, WorldRemit, Sendwave).
+      Si vous créez un compte via nos liens, nous pouvons percevoir une commission sans frais supplémentaires pour vous.
+      Cela ne modifie pas notre classement qui est basé uniquement sur le coût total pour l'utilisateur.
+      Les données de taux et frais sont fournies à titre indicatif et peuvent varier.
+      Vérifiez toujours les conditions sur le site de l'opérateur avant tout transfert.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Mise à jour automatique de l'année dans le footer
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

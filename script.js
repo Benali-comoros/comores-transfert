@@ -31,7 +31,7 @@ const OPERATORS = [
     taux: 491.50,        // TODO : taux indicatif, à vérifier
     delai: 'Instantané',
     delaiClass: 'instant',
-    affilLink: '[WISE_LINK]',  // TODO : remplacer par votre lien affilié Wise
+    affilLink: 'https://wise.com/fr/send-money/',
     hasAffil: true,
     note: ''
   },
@@ -45,7 +45,7 @@ const OPERATORS = [
     taux: 491.97,        // TODO : taux indicatif
     delai: 'Instantané',
     delaiClass: 'instant',
-    affilLink: '[REMITLY_LINK]',  // TODO : remplacer par votre lien affilié Remitly
+    affilLink: 'https://www.remitly.com/fr/fr/comoros',
     hasAffil: true,
     note: ''
   },
@@ -59,7 +59,7 @@ const OPERATORS = [
     taux: 489.00,        // TODO : taux indicatif
     delai: '1-2 heures',
     delaiClass: 'fast',
-    affilLink: '[WORLDREMIT_LINK]',  // TODO : remplacer par votre lien affilié WorldRemit
+    affilLink: 'https://www.worldremit.com/fr/envoyer-de-largent/comores',
     hasAffil: true,
     note: ''
   },
@@ -73,7 +73,7 @@ const OPERATORS = [
     taux: 488.50,        // TODO : taux indicatif
     delai: 'Instantané',
     delaiClass: 'instant',
-    affilLink: '[SENDWAVE_LINK]',  // TODO : remplacer par votre lien affilié Sendwave
+    affilLink: 'https://www.sendwave.com/',
     hasAffil: true,
     note: ''
   },

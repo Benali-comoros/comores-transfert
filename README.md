@@ -1,4 +1,4 @@
-# KomoreTransfert — Guide de déploiement sur GitHub Pages
+# TauxComores — Guide de déploiement sur GitHub Pages
 
 Déploiement gratuit, sans serveur, sans domaine payant.  
 URL finale : `https://[votre-username].github.io/comores-transfert/`
@@ -56,7 +56,7 @@ URL finale : `https://[votre-username].github.io/comores-transfert/`
    - `script.js`
    - `README.md`
 3. En bas de page, dans "Commit changes" :
-   - Message : `Lancement initial KomoreTransfert`
+   - Message : `Lancement initial TauxComores`
 4. Cliquez **Commit changes**.
 
 ### Option B — Via Git en ligne de commande
@@ -71,7 +71,7 @@ cp /chemin/vers/site/* .
 
 # Commit et push
 git add .
-git commit -m "Lancement initial KomoreTransfert"
+git commit -m "Lancement initial TauxComores"
 git push origin main
 ```
 

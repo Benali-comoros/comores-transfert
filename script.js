@@ -1,5 +1,5 @@
 /**
- * KomoreTransfert - script.js
+ * TauxComores - script.js
  * Fonctionnalités :
  *   1. Calculateur de montant (recalcul en temps réel)
  *   2. Tri du tableau par colonne
@@ -356,7 +356,7 @@ function initTableSort() {
  *   gtag('event', 'affil_click', { operator: operatorId, amount: amount });
  */
 function trackAffil(operatorId, amount) {
-  console.log(`[KomoreTransfert] Clic affilié : ${operatorId} | Montant : ${amount} EUR`);
+  console.log(`[TauxComores] Clic affilié : ${operatorId} | Montant : ${amount} EUR`);
 
   // TODO : Décommenter et adapter quand GA4 est installé
   // if (typeof gtag !== 'undefined') {
@@ -394,7 +394,7 @@ function initCookieBanner() {
       localStorage.setItem('kmt_cookie_consent', 'accepted');
       banner.style.display = 'none';
       // TODO : Initialiser vos outils analytics ici
-      console.log('[KomoreTransfert] Consentement cookies : accepté');
+      console.log('[TauxComores] Consentement cookies : accepté');
     });
   }
 
@@ -402,7 +402,7 @@ function initCookieBanner() {
     btnDecline.addEventListener('click', function () {
       localStorage.setItem('kmt_cookie_consent', 'declined');
       banner.style.display = 'none';
-      console.log('[KomoreTransfert] Consentement cookies : refusé');
+      console.log('[TauxComores] Consentement cookies : refusé');
     });
   }
 }
@@ -472,7 +472,7 @@ function initNewsletter() {
     // Exemple Brevo (SendinBlue) :
     // fetch('https://api.brevo.com/v3/contacts', { method: 'POST', ... })
 
-    console.log(`[KomoreTransfert] Inscription newsletter : ${email}`);
+    console.log(`[TauxComores] Inscription newsletter : ${email}`);
     this.innerHTML = `<p style="color:var(--green);font-weight:700;font-size:1rem;">
       ✓ Merci ! Vous recevrez les mises à jour des taux par email.</p>`;
   });
@@ -492,6 +492,6 @@ document.addEventListener('DOMContentLoaded', function () {
   initFAQ();
   initNewsletter();
 
-  console.log('[KomoreTransfert] Site initialisé. Taux de marché :', TAUX_MARCHE, 'EUR/KMF');
-  console.log('[KomoreTransfert] TODO : Remplacer les [XXXX_LINK] par vos vrais liens affiliés dans script.js');
+  console.log('[TauxComores] Site initialisé. Taux de marché :', TAUX_MARCHE, 'EUR/KMF');
+  console.log('[TauxComores] TODO : Remplacer les [XXXX_LINK] par vos vrais liens affiliés dans script.js');
 });

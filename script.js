@@ -50,20 +50,6 @@ const OPERATORS = [
     note: ''
   },
   {
-    id: 'sendwave',
-    name: 'Sendwave',
-    type: 'Transfert en ligne',
-    initials: 'SW',
-    color: '#9C27B0',
-    frais: 0.00,         // TODO : vérifier sur sendwave.com
-    taux: 488.50,        // TODO : taux indicatif
-    delai: 'Instantané',
-    delaiClass: 'instant',
-    affilLink: 'https://www.sendwave.com/',
-    hasAffil: true,
-    note: ''
-  },
-  {
     id: 'western-union-cash',
     name: 'Western Union',
     type: 'Espèces en agence',

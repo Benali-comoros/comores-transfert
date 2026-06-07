@@ -1299,9 +1299,16 @@ footer {
 
   .calculator-bar {
     padding: 16px;
+    gap: 10px;
+  }
+  .calculator-bar label {
+    flex-basis: 100%;
   }
   .input-group {
     width: 100%;
+  }
+  #montant-input {
+    min-width: 90px;
   }
 
   .table-scroll-hint {

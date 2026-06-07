@@ -78,19 +78,34 @@ const OPERATORS = [
     note: ''
   },
   {
-    id: 'western-union',
+    id: 'western-union-cash',
     name: 'Western Union',
-    type: 'Agence physique',
+    type: 'Espèces en agence',
     initials: 'WU',
     color: '#FFD700',
     textColor: '#333',
-    frais: 9.00,         // TODO : vérifier sur westernunion.com
-    taux: 480.00,        // TODO : taux indicatif
+    frais: 6.90,         // Confirmé 07/06/2026 — paiement espèces
+    taux: 491.9678,      // Confirmé 07/06/2026
     delai: 'Instantané',
     delaiClass: 'instant',
     affilLink: null,
     hasAffil: false,
-    note: 'Nécessite une agence physique'
+    note: 'Retrait cash en agence'
+  },
+  {
+    id: 'western-union-online',
+    name: 'Western Union En ligne',
+    type: 'Virement / Carte',
+    initials: 'WU',
+    color: '#FFD700',
+    textColor: '#333',
+    frais: 0.00,         // Confirmé 07/06/2026 — paiement hors espèces
+    taux: 491.9678,      // Confirmé 07/06/2026
+    delai: 'Instantané',
+    delaiClass: 'instant',
+    affilLink: null,
+    hasAffil: false,
+    note: 'En ligne, sans frais fixes'
   },
   {
     id: 'ria',

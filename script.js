@@ -93,6 +93,21 @@ const OPERATORS = [
     note: 'Nécessite une agence physique'
   },
   {
+    id: 'ria',
+    name: 'RIA Money Transfer',
+    type: 'Agence physique / En ligne',
+    initials: 'RIA',
+    color: '#E31837',
+    textColor: '#fff',
+    frais: 3.99,         // TODO : vérifier sur riamoneytransfer.com
+    taux: 486.00,        // TODO : taux indicatif, à vérifier
+    delai: '1-2 jours',
+    delaiClass: 'fast',
+    affilLink: 'https://www.riamoneytransfer.com/fr',
+    hasAffil: false,
+    note: 'Disponible en agence et en ligne'
+  },
+  {
     id: 'orange-money',
     name: 'Orange Money Europe',
     type: 'Mobile Money',

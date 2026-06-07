@@ -18,7 +18,7 @@
  * - "tauxMarche" : taux de change du marché (source : XE.com ou Wise mid-market)
  * - "affilLink" : remplacer [WISE_LINK] etc. par vos vrais liens affiliés
  */
-const TAUX_MARCHE = 493.00; // TODO : Mettre à jour chaque semaine (taux mid-market EUR/KMF)
+const TAUX_MARCHE = 492.00; // Mis à jour le 07/06/2026 — source : Wise mid-market
 
 const OPERATORS = [
   {
@@ -27,8 +27,8 @@ const OPERATORS = [
     type: 'Transfert en ligne',
     initials: 'W',
     color: '#4CAF50',
-    frais: 0.00,         // TODO : vérifier sur wise.com/fr
-    taux: 491.50,        // TODO : taux indicatif, à vérifier
+    frais: 1.19,         // Mis à jour 07/06/2026 — frais variables ~0.43% + fixe (virement bancaire 200€)
+    taux: 492.00,        // Mis à jour 07/06/2026 — taux mid-market Wise EUR/KMF
     delai: 'Instantané',
     delaiClass: 'instant',
     affilLink: 'https://wise.com/fr/send-money/',

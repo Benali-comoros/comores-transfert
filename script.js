@@ -50,20 +50,6 @@ const OPERATORS = [
     note: ''
   },
   {
-    id: 'worldremit',
-    name: 'WorldRemit',
-    type: 'Transfert en ligne',
-    initials: 'WR',
-    color: '#FF5722',
-    frais: 3.99,         // TODO : vérifier sur worldremit.com
-    taux: 489.00,        // TODO : taux indicatif
-    delai: '1-2 heures',
-    delaiClass: 'fast',
-    affilLink: 'https://www.worldremit.com/fr/envoyer-de-largent/comores',
-    hasAffil: true,
-    note: ''
-  },
-  {
     id: 'sendwave',
     name: 'Sendwave',
     type: 'Transfert en ligne',

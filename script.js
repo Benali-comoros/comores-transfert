@@ -99,8 +99,8 @@ const OPERATORS = [
     initials: 'RIA',
     color: '#E31837',
     textColor: '#fff',
-    frais: 3.99,         // TODO : vérifier sur riamoneytransfer.com
-    taux: 486.00,        // TODO : taux indicatif, à vérifier
+    frais: 4.75,         // Confirmé 07/06/2026
+    taux: 491.97,        // Confirmé 07/06/2026
     delai: '1-2 jours',
     delaiClass: 'fast',
     affilLink: 'https://www.riamoneytransfer.com/fr',

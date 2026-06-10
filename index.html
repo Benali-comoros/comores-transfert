@@ -24,16 +24,22 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TauxComores – Comparez vos transferts France → Comores" />
+  <meta name="twitter:description" content="Comparez Wise, Remitly, WorldRemit, Sendwave pour envoyer de l'argent aux Comores. Découvrez le vrai coût total : frais + marge sur taux de change." />
 
   <!-- Données structurées JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": ["WebSite", "Organization"],
     "name": "TauxComores",
     "url": "https://tauxcomores.com/",
-    "description": "Comparateur de transfert d'argent France vers Comores",
-    "inLanguage": "fr-FR"
+    "description": "Comparateur de transfert d'argent France vers Comores — Wise, Remitly, Sendwave, WorldRemit comparés en transparence totale.",
+    "inLanguage": "fr-FR",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://tauxcomores.com/#comparateur",
+      "query-input": "required name=montant"
+    }
   }
   </script>
 

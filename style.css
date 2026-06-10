@@ -584,6 +584,13 @@ nav a.active {
   text-decoration: none;
   color: var(--white);
 }
+.btn-table-direct {
+  background: var(--gray-700, #374151);
+}
+.btn-table-direct:hover {
+  background: var(--gray-800, #1f2937);
+  box-shadow: 0 3px 8px rgba(0,0,0,.2);
+}
 .btn-table-na {
   display: inline-block;
   padding: 9px 18px;

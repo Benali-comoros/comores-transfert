@@ -60,7 +60,7 @@ const OPERATORS = [
     taux: 491.9678,      // Confirmé 07/06/2026
     delai: 'Instantané',
     delaiClass: 'instant',
-    affilLink: null,
+    affilLink: 'https://www.westernunion.com/fr/fr/web/send-money/start',
     hasAffil: false,
     note: 'Retrait cash en agence'
   },
@@ -75,7 +75,7 @@ const OPERATORS = [
     taux: 491.9678,      // Confirmé 07/06/2026
     delai: 'Instantané',
     delaiClass: 'instant',
-    affilLink: null,
+    affilLink: 'https://www.westernunion.com/fr/fr/web/send-money/start',
     hasAffil: false,
     note: 'En ligne, sans frais fixes'
   },
@@ -90,7 +90,7 @@ const OPERATORS = [
     taux: 491.97,        // Confirmé 07/06/2026
     delai: '1-2 jours',
     delaiClass: 'fast',
-    affilLink: 'https://www.riamoneytransfer.com/fr',
+    affilLink: 'https://www.riamoneytransfer.com/fr-fr',
     hasAffil: false,
     note: 'Disponible en agence et en ligne'
   },
@@ -104,7 +104,7 @@ const OPERATORS = [
     taux: 491.97,        // TODO : taux indicatif
     delai: 'Instantané',
     delaiClass: 'instant',
-    affilLink: null,
+    affilLink: 'https://www.orangemoney.com/',
     hasAffil: false,
     note: 'Disponible sur Orange Money app'
   }
@@ -222,11 +222,10 @@ function renderTable() {
       ctaHtml = `<a href="${op.affilLink}" target="_blank" rel="noopener sponsored"
         class="btn-table" onclick="trackAffil('${op.id}', '${currentAmount}')">
         Envoyer →</a>`;
-    } else if (op.hasAffil) {
-      ctaHtml = `<a href="#" class="btn-table btn-table-placeholder"
-        onclick="trackAffil('${op.id}', '${currentAmount}'); return false;">
-        Envoyer →</a>`;
-      // TODO : remplacer href="#" par le vrai lien affilié
+    } else if (op.affilLink) {
+      ctaHtml = `<a href="${op.affilLink}" target="_blank" rel="noopener"
+        class="btn-table btn-table-direct">
+        Voir le site →</a>`;
     } else {
       ctaHtml = `<span class="btn-table-na">Hors ligne</span>`;
     }
@@ -455,13 +454,20 @@ function initNewsletter() {
     const email = this.querySelector('input[type="email"]').value;
     if (!email) return;
 
-    // TODO : Remplacer par votre intégration Mailchimp / Brevo / Convertkit
-    // Exemple Brevo (SendinBlue) :
-    // fetch('https://api.brevo.com/v3/contacts', { method: 'POST', ... })
+    const formEl = this;
+    formEl.querySelector('button').disabled = true;
 
-    console.log(`[TauxComores] Inscription newsletter : ${email}`);
-    this.innerHTML = `<p style="color:var(--green);font-weight:700;font-size:1rem;">
-      ✓ Merci ! Vous recevrez les mises à jour des taux par email.</p>`;
+    fetch('https://script.google.com/macros/s/AKfycbwUFnhDaWrezBQ35lo2JtFxJhpLbzdBARAdb5mlYX9gsB9d1LZgN-65f-67ktbp2j5F/exec?email=' + encodeURIComponent(email), {
+      mode: 'no-cors',
+    })
+      .then(() => {
+        formEl.innerHTML = `<p style="color:var(--green);font-weight:700;font-size:1rem;">
+          ✓ Merci ! Vous recevrez les mises à jour des taux par email.</p>`;
+      })
+      .catch(() => {
+        formEl.querySelector('button').disabled = false;
+        alert('Une erreur est survenue, veuillez réessayer.');
+      });
   });
 }
 

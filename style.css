@@ -1319,7 +1319,100 @@ footer {
   }
 
   .table-scroll-hint {
+    display: none;
+  }
+
+  /* Tableau → cartes sur mobile */
+  .table-wrapper {
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .comparison-table {
+    min-width: 0;
+  }
+
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table tbody tr {
     display: block;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    margin-bottom: 12px;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .comparison-table tbody tr.best-row {
+    border: 2px solid #4CAF50;
+    background: #F6FBF6;
+  }
+
+  .comparison-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--gray-100);
+    font-size: 0.9rem;
+  }
+
+  .comparison-table td:last-child {
+    border-bottom: none;
+  }
+
+  .comparison-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: var(--gray-600);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  /* Ligne opérateur : header de la carte */
+  .comparison-table td:first-child {
+    background: var(--navy);
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    padding: 12px 14px;
+  }
+
+  .comparison-table td:first-child::before {
+    display: none;
+  }
+
+  .comparison-table td:first-child .operator-name {
+    color: var(--white);
+    font-size: 1rem;
+  }
+
+  .comparison-table td:first-child .operator-type {
+    color: rgba(255,255,255,0.7);
+  }
+
+  .comparison-table tbody tr.best-row td:first-child {
+    background: #2E7D32;
+  }
+
+  /* Bouton CTA centré en bas de carte */
+  .comparison-table td.td-cta {
+    justify-content: center;
+    padding: 12px 14px;
+    background: var(--gray-50);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+
+  .comparison-table td.td-cta::before {
+    display: none;
+  }
+
+  .btn-table {
+    width: 100%;
+    justify-content: center;
   }
 
   .footer-grid {

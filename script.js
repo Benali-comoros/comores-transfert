@@ -248,20 +248,20 @@ function renderTable() {
           </div>
         </div>
       </td>
-      <td>${formatEUR(op.frais)}</td>
-      <td class="fw-700">${op.taux.toFixed(2)}</td>
-      <td>
+      <td data-label="Frais">${formatEUR(op.frais)}</td>
+      <td data-label="Taux" class="fw-700">${op.taux.toFixed(2)}</td>
+      <td data-label="Montant reçu">
         <span class="amount-received ${isBest ? 'best' : ''}">
           ${formatKMF(op.calc.received)}
         </span>
       </td>
-      <td>
+      <td data-label="Coût réel">
         <span class="cout-total ${coutClass}">
           ${op.calc.coutTotal.toFixed(2).replace('.', ',')} €
         </span>
       </td>
-      <td>${getDelaiLabel(op)}</td>
-      <td>${ctaHtml}</td>
+      <td data-label="Délai">${getDelaiLabel(op)}</td>
+      <td class="td-cta">${ctaHtml}</td>
     `;
 
     tbody.appendChild(tr);

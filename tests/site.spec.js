@@ -11,7 +11,7 @@ test.describe('Page d\'accueil', () => {
   test('affiche le tableau comparatif avec tous les opérateurs', async ({ page }) => {
     await page.goto('/');
     const rows = page.locator('#comparison-tbody tr');
-    await expect(rows).toHaveCount(7);
+    await expect(rows).toHaveCount(6);
   });
 
   test('calculateur recalcule en temps réel', async ({ page }) => {

@@ -1,0 +1,22 @@
+{
+  "name": "comores-transfert",
+  "version": "1.0.0",
+  "description": "Déploiement gratuit, sans serveur, sans domaine payant.   URL finale : `https://[votre-username].github.io/comores-transfert/`",
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:32813/git/Benali-comoros/comores-transfert"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
